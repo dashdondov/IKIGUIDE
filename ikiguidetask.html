@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IKIGUIDE - Архитектур</title>
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" 
+    rel="stylesheet"
+  >
+  <!-- Font Awesome for icons -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2DhKNsFG3+/GL5nKmfChTxBa6J5E2faNtcC2a9I6Z3Qv2pWdE7+aoxZpR5OJ+GZaw==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" 
+  />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    /* Updated Header styling with left-aligned logo and title and right-aligned chat button */
+    header {
+  max-width: 390px;   /* same as your main container's max-width */
+  margin: 0 auto;     /* centers the header in the viewport */
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .header-left img {
+      width: 50px;
+      height: 50px;
+      border-radius: 4px;
+    }
+    .header-left span {
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+    .header-right {
+      display: flex;
+      align-items: center;
+    }
+    .menu-button {
+      background: none;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 0.5rem;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    /* Main container */
+    .container {
+      max-width: 390px;
+      margin: 0 auto;
+      padding: 1rem;
+      max-height: 844px;
+    }
+    
+    /* Title section */
+    .title-section {
+      margin: 1rem 0;
+      text-align: center;
+    }
+    .title-section h2 {
+      font-size: 1.5rem;
+      margin: 0;
+      font-weight: 600;
+    }
+    .title-section .sub {
+      font-size: 1rem;
+      color: #666;
+      margin-top: 0.25rem;
+    }
+
+    /* Parent container for the task boxes */
+    .task-container {
+      margin-bottom: auto;
+    }
+
+    /* Each task box styled in light green */
+    .task-box {
+      background-color: #E8F5E9; /* light green background */
+      border: 1px solid #4CAF50;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    .task {
+      display: flex;
+      align-items: center;
+    }
+    .checkbox-container {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border: 2px solid #4CAF50;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-right: 0.75rem;
+      position: relative;
+    }
+    .checkbox-container.checked {
+      background-color: #4CAF50;
+      border-color: #4CAF50;
+    }
+    .checkbox-container.checked i {
+      display: block;
+      color: #fff;
+    }
+    .checkbox-container i {
+      display: none;
+      pointer-events: none;
+    }
+    .task p {
+      margin: 0;
+      flex: 1;
+      line-height: 1.4;
+    }
+
+    /* Notes box container styling in light green */
+    .notes-box {
+      background-color: #E8F5E9;
+      border: 1px solid #4CAF50;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    .notes-label {
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    .notes-area {
+      width: 100%;
+      min-height: 80px;
+      resize: vertical;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Updated Header: Left side for logo and title, right side for chat button -->
+  <header>
+    <div class="header-left">
+      <img src="C:\Users\Dell\Downloads\Screenshot 2025-04-02 105236.png" alt="Logo">
+      <span>IKIGUIDE</span>
+    </div>
+    <div class="header-right">
+      <button class="menu-button"><i class="fas fa-comment-dots"></i></button>
+    </div>
+  </header>
+
+  <!-- Main content container -->
+  <div class="container">
+    <!-- Title section -->
+    <div class="title-section">
+      <h2>Архитектур</h2>
+      <div class="sub">Өдөр 1</div>
+    </div>
+
+    <!-- Task container with three task boxes -->
+    <div class="task-container">
+      <!-- Task Box 1 -->
+      <div class="task-box">
+        <div class="task">
+          <div class="checkbox-container" onclick="toggleCheck(this)">
+            <i class="fas fa-check"></i>
+          </div>
+          <p>1. Архитектурын тухай танилцуулга видео эсвэл лекц үзэх</p>
+        </div>
+      </div>
+      <!-- Task Box 2 -->
+      <div class="task-box">
+        <div class="task">
+          <div class="checkbox-container" onclick="toggleCheck(this)">
+            <i class="fas fa-check"></i>
+          </div>
+          <p>2. Суурь архитектурын зарчмууд унших</p>
+        </div>
+      </div>
+      <!-- Task Box 3 -->
+      <div class="task-box">
+        <div class="task">
+          <div class="checkbox-container" onclick="toggleCheck(this)">
+            <i class="fas fa-check"></i>
+          </div>
+          <p>3. Дэлгэрэнгүй мэдээлэл болон нэмэлт эх сурвалж унших</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notes box container -->
+    <div class="notes-box">
+      <label for="notes" class="notes-label">Миний тэмдэглэл</label>
+      <textarea id="notes" class="notes-area" placeholder="..."></textarea>
+    </div>
+  </div>
+
+  <!-- JavaScript to toggle checkbox state -->
+  <script>
+    function toggleCheck(element) {
+      element.classList.toggle("checked");
+    }
+  </script>
+</body>
+</html>
