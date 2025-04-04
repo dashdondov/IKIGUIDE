@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=390, initial-scale=1.0">
+  <title>IKIGUIDE - Профайл</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    /* Profile Page Specific Styles (if not in global CSS) */
+    .profile-container {
+      max-width: 390px;
+      margin: 1rem auto;
+      padding: 1rem;
+    }
+    .conclusion-section {
+      background-color: #E8F5E9;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .conclusion-section h2 {
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+    }
+    .jobs-section h2 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .jobs-section ul {
+      list-style: none;
+      padding: 0;
+    }
+    .jobs-section li {
+      padding: 0.5rem;
+      border-bottom: 1px solid #ccc;
+      text-align: center;
+    }
+    .back-home {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #4CAF50;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-left">
+      <img src="images/logo.png" alt="Logo" class="header-logo">
+      <span>IKIGUIDE</span>
+    </div>
+    <div class="header-right">
+      <!-- Link back to questionnaire if user wishes to change their answers -->
+      <a href="questionnaire.html" class="header-link"><i class="fas fa-question"></i></a>
+    </div>
+  </header>
+
+  <main class="profile-container">
+    <section class="conclusion-section">
+      <h2>Таны IKIGAI Дүгнэлт</h2>
+      <p id="aiConclusion">Энд таны дүгнэлт гарна...</p>
+    </section>
+    <section class="jobs-section">
+      <h2>Ажлын Санал</h2>
+      <ul id="jobList">
+        <li>Архитектур (Үнэгүй)</li>
+        <li>Архитектурын зөвлөмж (Үнэгүй)</li>
+        <li>Инженер (Худалдан авах)</li>
+        <li>Дизайнер (Худалдан авах)</li>
+        <li>Программист (Худалдан авах)</li>
+      </ul>
+    </section>
+    <a href="index.html" class="back-home">Нүүр хуудас руу буцах</a>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

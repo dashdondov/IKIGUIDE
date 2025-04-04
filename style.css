@@ -1,0 +1,340 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Header */
+.main-header {
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+}
+.header-left span {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+.header-right a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+/* Navigation (Home Page) */
+.main-nav {
+  max-width: 390px;
+  margin: 0 auto;
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+}
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5rem 0;
+}
+.nav-link {
+  text-decoration: none;
+  color: #777;
+  font-weight: 500;
+}
+.nav-link.active,
+.nav-link:hover {
+  color: #4CAF50;
+}
+
+/* Home Content */
+.home-content {
+  max-width: 390px;
+  margin: 1rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+.buuz-character {
+  width: 150px;
+  margin-top: 20px;
+}
+
+/* Form Containers (Login/Signup) */
+.form-container {
+  width: 390px;
+  height: 844px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.form-logo {
+  width: 250px;
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+.form-container h2 {
+  margin-bottom: 20px;
+}
+.form-container input,
+.form-container select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.form-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  color: #fff;
+  background: #6cd15a;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.form-btn:hover {
+  background: #58b648;
+}
+.social-container {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+.social-container img {
+  width: 30px;
+  cursor: pointer;
+}
+.back-link {
+  margin-top: 10px;
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Page Container for content pages */
+.page-container {
+  max-width: 390px;
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+/* Questionnaire Styles */
+.questionnaire-container h2 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+.questionnaire-container p {
+  margin-bottom: 10px;
+  text-align: center;
+}
+.questionnaire-container textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+  margin-bottom: 20px;
+}
+.step {
+  display: none;
+  animation: fadeIn 0.5s ease;
+}
+.step.active {
+  display: block;
+}
+.next-btn, #submitBtn, #retryBtn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  color: #fff;
+  background: #6cd15a;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.next-btn:hover, #submitBtn:hover, #retryBtn:hover {
+  background: #58b648;
+}
+
+/* Tasks Page (Daily Tasks) */
+.app-container {
+  width: 390px;
+  height: 844px;
+  background: #fff;
+  position: relative;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+.title-section {
+  text-align: center;
+  margin: 1rem 0;
+}
+.title-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.title-section .sub {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
+.task-container {
+  margin-bottom: 1rem;
+}
+.task-box {
+  background: #E8F5E9;
+  border: 1px solid #4CAF50;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.task {
+  display: flex;
+  align-items: center;
+}
+.checkbox-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #4CAF50;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 0.75rem;
+  position: relative;
+}
+.checkbox-container.checked {
+  background: #4CAF50;
+  border-color: #4CAF50;
+}
+.checkbox-container.checked i {
+  display: block;
+  color: #fff;
+}
+.checkbox-container i {
+  display: none;
+  pointer-events: none;
+}
+.task p {
+  margin: 0;
+  flex: 1;
+  line-height: 1.4;
+}
+.notes-box {
+  background: #E8F5E9;
+  border: 1px solid #4CAF50;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.notes-label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.notes-area {
+  width: 100%;
+  min-height: 80px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+/* Bottom Navigation (Tasks Page) */
+.bottom-nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #777;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.nav-item span {
+  font-size: 0.7rem;
+  margin-top: 2px;
+}
+.nav-item:hover {
+  color: #4CAF50;
+}
+
+/* Card Styles for University, Mentor, Competition */
+.card {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.card h3 {
+  margin-bottom: 0.5rem;
+}
+.card p {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+.card-btn {
+  padding: 10px 16px;
+  background: #6cd15a;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.card-btn:hover {
+  background: #58b648;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

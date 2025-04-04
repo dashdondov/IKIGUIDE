@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=390, initial-scale=1.0">
+  <title>IKIGUIDE - Бүртгүүлэх</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="form-container signup-container">
+    <img src="images/logo.png" alt="IKIGUIDE" id="logo">
+    <h2>Бүртгүүлэх</h2>
+    <form onsubmit="event.preventDefault(); window.location.href='index.html';">
+      <input type="text" name="fullname" placeholder="Овог Нэр" required>
+      <select name="gender" required>
+        <option value="" disabled selected>Хүйс</option>
+        <option value="male">Эрэгтэй</option>
+        <option value="female">Эмэгтэй</option>
+        <option value="other">Бусад</option>
+      </select>
+      <input type="text" name="dob" placeholder="DD/MM/YYYY" required>
+      <input type="tel" name="phone" placeholder="Утасны дугаар" required>
+      <button class="form-btn">БҮРТГҮҮЛЭХ</button>
+    </form>
+    <div class="social-container">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" onclick="alert('Facebook signup clicked!');">
+      <img src="https://cdn-icons-png.flaticon.com/512/300/300221.png" alt="Google" onclick="alert('Google signup clicked!');">
+    </div>
+    <a href="index.html" class="back-link">Буцах</a>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

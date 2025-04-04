@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=390, initial-scale=1.0">
+  <title>IKIGUIDE - Асуулга</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-left">
+      <img src="images/logo.png" alt="Logo" class="header-logo">
+      <span>IKIGUIDE</span>
+    </div>
+    <div class="header-right">
+      <a href="profile.html" class="header-link"><i class="fas fa-user"></i></a>
+    </div>
+  </header>
+
+  <main class="questionnaire-container page-container">
+    <!-- Multi-step container -->
+    <div class="step active" id="step1">
+      <h2>Асуулга 1</h2>
+      <p>Та юу хийх дуртай вэ?</p>
+      <textarea id="answer1" placeholder="Хариултаа энд бичнэ үү..."></textarea>
+      <button class="next-btn" data-next="2">Дараагийн</button>
+    </div>
+    <div class="step" id="step2">
+      <h2>Асуулга 2</h2>
+      <p>Та юуг сайн хийж чаддаг вэ?</p>
+      <textarea id="answer2" placeholder="Хариултаа энд бичнэ үү..."></textarea>
+      <button class="next-btn" data-next="3">Дараагийн</button>
+    </div>
+    <div class="step" id="step3">
+      <h2>Асуулга 3</h2>
+      <p>Дэлхий ертөнцөд юугаар туслах вэ?</p>
+      <textarea id="answer3" placeholder="Хариултаа энд бичнэ үү..."></textarea>
+      <button class="next-btn" data-next="4">Дараагийн</button>
+    </div>
+    <div class="step" id="step4">
+      <h2>Асуулга 4</h2>
+      <p>Та юунаас мөнгө олох боломжтой вэ?</p>
+      <textarea id="answer4" placeholder="Хариултаа энд бичнэ үү..."></textarea>
+      <button id="submitBtn">Илгээх</button>
+    </div>
+    <!-- Results step -->
+    <div class="step" id="step5">
+      <h2>Таны IKIGAI Дүгнэлт</h2>
+      <p id="aiConclusion">Энд таны дүгнэлт гарна...</p>
+      <button id="retryBtn">Дахин оролдох</button>
+    </div>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
